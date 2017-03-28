@@ -1,15 +1,4 @@
 
-[//]: # (Image References)
-
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
-
 ## Traffic Sign Classifier Project
 
 ### I. Data Set Summary & Exploration
@@ -44,8 +33,7 @@ The code for this step is contained in the 4th to 7th code cell of the IPython n
 The preprocessing step includes converting from RGB to grayscale and normalize the image data.  
 
 I decided to convert the images to grayscale because color is not a decisive factor for recognizing a traffic sign. A speed limit sign should be recognizable either in grayscale or color.
-In addition, using only 1 channel of the image data reduce the data size by 70 % and speed up the training process.  
-
+In addition, using only 1 channel of the image data reduce the data size by 70% and makes the training process easier and faster.  
 Here is an example of a traffic sign image before and after grayscaling and normalization:  
 
 ![alt text](images/Img_before_after.png)
@@ -193,11 +181,6 @@ Here is the result:
 ![alt text](images/Top_K10.png)
 
 ### IV. Conclusion
-The model achieved a pretty good performance of predicting the test data set with 96.70% accuracy.  
-I believe the model could be improved with data augmentation, given the uniformity of the sample data.  
-
-
-```python
-
-
-```
+The model achieved a pretty good performance of predicting the test data set with 96.70% accuracy, and new data set with 80% accuracy.
+I believe the model could be improved with data augmentation (flipping, rotation, etc).  
+If data augmentation were performed, I believe the model would accurately predict the flipped #28 (Children crossing) sign from the new data set, making the accuracy on the new data set to 100%.  
